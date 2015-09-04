@@ -3,7 +3,7 @@
 # ********************************
 # hw1.py -- Homework 1 assignment.
 # ********************************
-# This file must be named ``hw1.py``; none of the function names below are allowed
+# This file must be named hw1.py; none of the function names below are allowed
 # to change.
 #
 # Code skeleton
@@ -13,9 +13,9 @@ def pick_val(
   # The sequence to pick from.
   seq,
   #
-  # The index of the element to select, measured from the end of the list. That
-  # is, 1 refers to the last item in seq, 2 to the second item from the end,
-  # etc. This parameter defaults to the 4th from the end.
+  # The index of the element to select, measured from the end of the list. That is,
+  # 1 refers to the last item in seq, 2 to the second item from the end, etc.
+  # This parameter defaults to the 4th from the end.
   #
   # * If the sequence is shorter than 4 elements, select the third, second,
   #   first, or raise an IndexError exception if the sequence is empty.
@@ -25,7 +25,16 @@ def pick_val(
   index=4):
 
     # Dummy code -- replace this with your code.
-    pass
+    seqlen = len(seq)
+    if (seqlen >= index):
+        return (seq[seqlen - index])
+    else:
+        return (seq[0])
+    if (seqlen == 0):
+        raise IndexError
+    if (seq != intType):
+        raise TypeError
+    
 
 # Tests
 # =====
